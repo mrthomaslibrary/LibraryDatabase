@@ -16,6 +16,12 @@ public:
   CallNumber();
   CallNumber(string g, float s, string c);
   ~CallNumber();
+  string getClass();
+  float getSubject();
+  string getCutter();
+  int getYear();
+  int getVolume();
+  int getCopy();
   int compare(CallNumber cn);
 };
 

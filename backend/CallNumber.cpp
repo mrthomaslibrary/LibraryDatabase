@@ -23,43 +23,66 @@ CallNumber::~CallNumber() {
   cout << "@CallNumber Object Deleted" << endl;
 }
 
+string CallNumber::getClass() {
+  return genclass;
+}
+
+float CallNumber::getSubject() {
+  return subject;
+}
+
+string CallNumber::getCutter() {
+  return cutter;
+}
+
+int CallNumber::getYear() {
+  return year;
+}
+
+int CallNumber::getVolume() {
+  return volume;
+}
+
+int CallNumber::getCopy() {
+  return copy;
+}
+
 int CallNumber::compare(CallNumber cn) {
-  if (this.genclass > cn.genclass) {
-    return true
-  } else if (this.genclass < cn.genclass) {
-    false;
+  if (this->genclass > cn.getClass()) {
+    return true;
+  } else if (this->genclass < cn.getClass()) {
+    return false;
   }
   else {
-     if (this.subject > cn.subject) {
+     if (this->subject > cn.getSubject()) {
       return 1;
-    } else if (this.genclass < cn.genclass) {
+    } else if (this->subject < cn.getSubject()) {
       return -1;
-    }
-    else {
-      if (this.cutter > cn.cutter) {
+    } else {
+      if (this->cutter > cn.getCutter()) {
         return 1;
-      } else if (this.cutter < cn.cutter) {
+      } else if (this->cutter < cn.getCutter()) {
         return -1;
       }
       else {
-        if (this.year > cn.year) {
-          reutrn 1;
+        if (this->year > cn.getYear()) {
+          return 1;
         }
-        else if (this.year < cn.year) {
+        else if (this->year < cn.getYear()) {
           return -1;
         }
         else {
-          if (this.volume > cn.volume) {
+          if (this->volume > cn.getVolume()) {
             return 1;
           }
-          else if (this.volume < cn.volume) {
+          else if (this->volume < cn.getVolume()) {
             return -1;
           }
           else {
-            if (this.copy > cn.copy) {
+            if (this->copy > cn.getCopy()) {
               return 1;
             }
-            else if (this.copy < cn.copy) {
+            else if (this->copy < cn.getCopy()) {
               return -1;
             }
             else {
@@ -73,6 +96,6 @@ int CallNumber::compare(CallNumber cn) {
 }
 
 ostream& operator<<(ostream& rhs, CallNumber lhs) {
-  rhs << lhs.genclass + "." + lhs.subject + "." + lhs.cutter;
+  rhs << lhs.getClass() + "." + std::to_string(lhs.getSubject()) + "." + lhs.getCutter();
   return rhs;
 }
