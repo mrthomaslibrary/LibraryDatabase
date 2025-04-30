@@ -1,7 +1,7 @@
 #include "Node.hpp"
 
-template <typename T> Node<T>::Node(T newData) { data = newData; }
+Node::Node(CallNumber newData) { data = newData; }
 
-template <typename T> Node<T>::~Node() {}
+Node::~Node() {}
 
-template <typename T> T Node<T>::getData() { return data; }
+CallNumber Node::getData() { return data; }

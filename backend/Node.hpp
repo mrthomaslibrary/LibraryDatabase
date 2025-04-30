@@ -1,10 +1,12 @@
-template <typename T> class Node {
+#include "CallNumber.hpp"
+
+class Node {
 private:
-  T data;
+  CallNumber data;
   public:
-  Node(T newData);
+  Node(CallNumber newData);
   ~Node();
   Node *frontNode;
   Node *sideNode;
-  T getData();
+  CallNumber getData();
 };
