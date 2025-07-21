@@ -15,4 +15,10 @@ class CallNumber {
   ~CallNumber();
   int compare(const CallNumber& cn) const;
   std::string getFullCallNumber() const;
+
+  std::string getGClass() const;
+  float getSubject() const;
+  std::string getCutter() const;
+  int getCopy() const;
+
 };
