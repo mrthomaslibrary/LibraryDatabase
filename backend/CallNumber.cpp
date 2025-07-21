@@ -1,4 +1,5 @@
 #include "CallNumber.hpp"
+#include <random>
 #include <sstream>
 #include <iomanip>
 
@@ -35,4 +36,20 @@ int CallNumber::compare(const CallNumber& cn) const {
 
 std::string CallNumber::getFullCallNumber() const {
   return fullCallNumber;
+}
+
+std::string CallNumber::getGClass() const {
+  return gClass;
+}
+
+float CallNumber::getSubject() const {
+  return subject;
+}
+
+std::string CallNumber::getCutter() const {
+  return cutter;
+}
+
+int CallNumber::getCopy() const {
+  return copy;
 }

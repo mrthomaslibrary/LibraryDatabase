@@ -1,3 +1,4 @@
+#pragma once
 #include "CallNumber.hpp"
 #include <string>
 
@@ -10,8 +11,12 @@ private:
 public:
   Book(const CallNumber cn, const std::string t, const std::string a);
   ~Book();
-  CallNumber *nextGClass;
-  CallNumber *nextSubject;
-  CallNumber *nextCutter;
-  CallNumber *nextCopy;
+  Book *nextGClass;
+  Book *nextSubject;
+  Book *nextCutter;
+  Book *nextCopy;
+
+  CallNumber getCallNumber() const;
+  std::string getTitle() const;
+  std::string getAuthor() const;
 };
